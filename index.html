@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="form sign_in">
+                <h3>Sign Up</h3>
+                <span>or use your email for register</span>
+            
+                <form action="#" id="form_input">
+                    <div class="type">
+                        <input type="text" placeholder="Name" id="name">
+                    </div>
+                    <div class="type">
+                        <input type="email" placeholder="Email" id="email">
+                    </div>
+                    <div class="type">
+                        <input type="password" placeholder="Password" id="password" autocomplete="off">
+                        <ul id="password-rules" style="display: none;">
+                            <li id="length" class="invalid">&#10060; Minimal 8 karakter</li>
+                            <li id="uppercase" class="invalid">&#10060; Minimal 1 huruf besar</li>
+                            <li id="number" class="invalid">&#10060; Minimal 1 angka</li>
+                        </ul>
+                    </div>
+                    <button type="submit" class="btn bkg">Sign Up</button>
+                </form>
+            </div>
+            
+    
+            <div class="container-calcu">
+                <div class="calculator">
+                    <input type="text" class="screen" id="screen" disabled>
+                    <div class="buttons">
+                        <button onclick="clearScreen()" class="clear">C</button>
+                        <button onclick="appendValue('/')">/</button>
+                        <button onclick="appendValue('*')">*</button>
+                        <button onclick="appendValue('-')">-</button>
+                        <button onclick="appendValue('7')">7</button>
+                        <button onclick="appendValue('8')">8</button>
+                        <button onclick="appendValue('9')">9</button>
+                        <button onclick="appendValue('+')">+</button>
+                        <button onclick="appendValue('4')">4</button>
+                        <button onclick="appendValue('5')">5</button>
+                        <button onclick="appendValue('6')">6</button>
+                        <button onclick="appendValue('.')">.</button>
+                        <button onclick="appendValue('1')">1</button>
+                        <button onclick="appendValue('2')">2</button>
+                        <button onclick="appendValue('3')">3</button>
+                        <br>
+                        <button onclick="appendValue('0')" style="grid-column: span 2;">0</button>
+                        <button onclick="calculateResult()" class="equal">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay">
+            <div class="page page_signIn">
+                <h3>Operator Logika</h3>
+                 <p>Operator logika adalah operator yang digunakan untuk melakukan operasi logis pada nilai boolean (true/false). </p>
+                 <p>macam macam operator logika adalah : </p>
+                 <ol>
+                    <li>And ( && )</li>
+                    <li>Or ( || )</li>
+                    <li>not ( ! )</li>
+                    <li>dst</li>
+                 </ol>
+                 <span>contoh nya bisa di liat di kiri</span>
+
+                <button class="btn btnSign-in">Operator Aritmatika <i class="bi bi-arrow-right"></i></button>
+            </div>
+
+            <div class="page page_signUp">
+                <h3>Operator Aritmatika</h3>
+                <p>Operator aritmatika digunakan untuk melakukan operasi matematika seperti penjumlahan, pengurangan, perkalian, dan sebagainya.</p>
+                <p>macam-macam operator aritmatika adalah :</p>
+                <ol>
+                    <li>penjumlahan (+)</li>
+                    <li>pengurangan (-)</li>
+                    <li>pembagian (/)</li>
+                    <li>perkalian (*)</li>
+                    <li>bagi sisa (%)</li>
+                    <li>kuadrat (**)</li>
+                    <li>dst</li>
+                 </ol>
+                 <span>contoh nya bisa di liat di kanan</span>
+
+                <button class="btn btnSign-up">
+                    <i class="bi bi-arrow-left"></i>Operator Logika</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
