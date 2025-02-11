@@ -412,7 +412,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f4f4f4;
     width: 100%;
 }
@@ -467,4 +466,89 @@ body {
 }
 .buttons .clear:hover {
     background: #c82333;
+}
+
+/* Media Query untuk layar HP (maksimal 768px) */
+@media screen and (max-width: 768px) {
+    .html{
+        font-size: 75%;
+    }
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .box, 
+    .container .overlay {
+        width: 100%;
+        
+    }
+
+    .container .overlay {
+        position: relative;
+        height: auto;
+        padding: 20px 0;
+        
+    }
+
+    .container.active .box {
+        transform: translateY(82%);
+    }
+
+    .container.active .overlay {
+        transform: translateY(-120%);
+    }
+
+    .container.active .overlay .page.page_signIn {
+        opacity: 0;
+        margin-left: -100%;
+    }
+    
+    .container.active .overlay .page.page_signUp {
+        margin-left: 0%;
+    }
+
+    .container .box .form,
+    .container .overlay .page {
+        padding: 20px;
+    }
+
+    .form h3 {
+        font-size: 30px;
+    }
+
+    .overlay .page h3 {
+        font-size: 30px;
+    }
+
+    .overlay .page p {
+        font-size: 14px;
+    }
+
+    #form_input .type {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .container-calcu {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .calculator {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 1633px) {
+    html {
+      font-size: 85%;
+    }
 }
