@@ -22,7 +22,7 @@ function calculateResult() {
     let result = new Function(
       "return " + document.getElementById("screen").value
     )();
-    document.getElementById("screen").value = String(hai);
+    document.getElementById("screen").value = result;
   } catch (error) {
     alert("Input tidak valid");
     clearScreen();
